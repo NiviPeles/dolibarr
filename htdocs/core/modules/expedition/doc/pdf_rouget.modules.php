@@ -289,6 +289,10 @@ class pdf_rouget extends ModelePdfExpedition
 
 				$pdf = pdf_getInstance($this->format);
 				$default_font_size = pdf_getPDFFontSize($outputlangs);
+				
+				// Enable RTL mode if language requires it
+				pdf_setRTLMode($pdf, $outputlangs);
+				
 				$heightforinfotot = 8; // Height reserved to output the info and total part
 				$heightforfreetext = getDolGlobalInt('MAIN_PDF_FREETEXT_HEIGHT', 5); // Height reserved to output the free text on last page
 				$heightforfooter = $this->marge_basse + 8; // Height reserved to output the footer (value include bottom margin)
