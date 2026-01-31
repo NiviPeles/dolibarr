@@ -227,6 +227,22 @@ function pdf_getInstance($format = '', $metric = 'mm', $pagetype = 'P')
 }
 
 /**
+ * Enable RTL (Right-To-Left) mode for PDF if language requires it
+ *
+ * @param   TCPDF		$pdf			PDF object
+ * @param   Translate	$outputlangs	Output language object
+ * @return  void
+ */
+function pdf_setRTLMode($pdf, $outputlangs)
+{
+	// Check if current language is RTL
+	if ($outputlangs->trans('DIRECTION') == 'rtl') {
+		// Enable RTL mode in TCPDF
+		$pdf->setRTL(true);
+	}
+}
+
+/**
  * Return if pdf file is protected/encrypted
  *
  * @param   string		$pathoffile		Path of file
