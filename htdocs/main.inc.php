@@ -1658,7 +1658,11 @@ function top_htmlhead($head, $title = '', $disablejs = 0, $disablehead = 0, $arr
 
 	print '<!doctype html>'."\n";
 
-	print '<html lang="'.substr($langs->defaultlang, 0, 2).'">'."\n";
+	$htmldir = '';
+	if (isset($langs->tab_translate["DIRECTION"]) && $langs->tab_translate["DIRECTION"] == 'rtl') {
+		$htmldir = ' dir="rtl"';
+	}
+	print '<html lang="'.substr($langs->defaultlang, 0, 2).'"'.$htmldir.'>'."\n";
 
 	//print '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">'."\n";
 	if (empty($disablehead)) {

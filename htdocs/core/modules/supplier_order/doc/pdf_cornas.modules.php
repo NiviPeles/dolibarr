@@ -276,6 +276,10 @@ class pdf_cornas extends ModelePDFSuppliersOrders
 
 				$pdf = pdf_getInstance($this->format);
 				$default_font_size = pdf_getPDFFontSize($outputlangs); // Must be after pdf_getInstance
+				
+				// Enable RTL mode if language requires it
+				pdf_setRTLMode($pdf, $outputlangs);
+				
 				$pdf->SetAutoPageBreak(true, 0);
 
 				$heightforinfotot = 40; // Height reserved to output the info and total part

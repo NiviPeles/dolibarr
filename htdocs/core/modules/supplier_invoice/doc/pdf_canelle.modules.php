@@ -235,6 +235,10 @@ class pdf_canelle extends ModelePDFSuppliersInvoices
 				// Create pdf instance
 				$pdf = pdf_getInstance($this->format);
 				$default_font_size = pdf_getPDFFontSize($outputlangs); // Must be after pdf_getInstance
+				
+				// Enable RTL mode if language requires it
+				pdf_setRTLMode($pdf, $outputlangs);
+				
 				$pdf->setAutoPageBreak(true, 0);
 
 				$heightforinfotot = 50 + (4 * $nbpayments); // Height reserved to output the info and total part and payment part

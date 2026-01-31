@@ -9203,6 +9203,121 @@ if (is_object($db)) {
 	background: #ddd;
 }
 
+/* RTL Language Support - Hebrew and Arabic */
+html[dir="rtl"] body {
+	text-align: right;
+}
+
+html[dir="rtl"] .left {
+	float: right !important;
+}
+
+html[dir="rtl"] .right {
+	float: left !important;
+}
+
+html[dir="rtl"] .pull-left {
+	float: right !important;
+}
+
+html[dir="rtl"] .pull-right {
+	float: left !important;
+}
+
+html[dir="rtl"] .marginleft {
+	margin-left: 0 !important;
+	margin-right: 5px !important;
+}
+
+html[dir="rtl"] .marginright {
+	margin-right: 0 !important;
+	margin-left: 5px !important;
+}
+
+html[dir="rtl"] .paddingleft {
+	padding-left: 0 !important;
+	padding-right: 5px !important;
+}
+
+html[dir="rtl"] .paddingright {
+	padding-right: 0 !important;
+	padding-left: 5px !important;
+}
+
+html[dir="rtl"] #id-left {
+	float: right;
+	right: 0;
+	left: auto;
+}
+
+html[dir="rtl"] #id-right {
+	margin-right: 240px;
+	margin-left: 0;
+}
+
+html[dir="rtl"] .side-nav {
+	right: 0;
+	left: auto;
+}
+
+html[dir="rtl"] table.liste th,
+html[dir="rtl"] table.liste td {
+	text-align: right;
+}
+
+html[dir="rtl"] .liste_titre {
+	text-align: right;
+}
+
+html[dir="rtl"] .pagination ul li {
+	float: right;
+}
+
+html[dir="rtl"] .tabBar {
+	text-align: right;
+}
+
+html[dir="rtl"] ul.vmenu {
+	text-align: right;
+}
+
+html[dir="rtl"] .badge {
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+html[dir="rtl"] .fieldrequired:before {
+	content: "*";
+	margin-left: 3px;
+	margin-right: 0;
+}
+
+html[dir="rtl"] .tmenu {
+	float: right;
+}
+
+html[dir="rtl"] div.mainmenu {
+	float: right;
+}
+
+html[dir="rtl"] .login_block {
+	right: auto;
+	left: 5px;
+}
+
+html[dir="rtl"] .tabsAction,
+html[dir="rtl"] .tabsActionNoBottom {
+	text-align: left;
+	margin-right: 0;
+}
+
+html[dir="rtl"] .butAction,
+html[dir="rtl"] .butActionNew,
+html[dir="rtl"] .butActionDelete {
+	margin-left: 0;
+	margin-right: 5px;
+}
+
 /* Remove text selection - Intuitive table selection */
 .row-with-select[data-is-last-changed] * {
 	-webkit-touch-callout: none; /* iOS Safari */

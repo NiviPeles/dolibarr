@@ -9466,6 +9466,205 @@ include dol_buildpath($path.'/theme/'.$theme.'/timeline.inc.php', 0);
 include dol_buildpath($path.'/theme/'.$theme.'/search-input.inc.css', 0);
 include dol_buildpath($path.'/theme/'.$theme.'/tooltips.inc.css', 0);
 
+?>
+
+/* RTL Language Support - Hebrew and Arabic */
+html[dir="rtl"] body {
+	text-align: right;
+}
+
+html[dir="rtl"] .left {
+	float: right !important;
+}
+
+html[dir="rtl"] .right {
+	float: left !important;
+}
+
+html[dir="rtl"] .pull-left {
+	float: right !important;
+}
+
+html[dir="rtl"] .pull-right {
+	float: left !important;
+}
+
+/* Flip margins and paddings */
+html[dir="rtl"] .marginleft {
+	margin-left: 0 !important;
+	margin-right: 5px !important;
+}
+
+html[dir="rtl"] .marginright {
+	margin-right: 0 !important;
+	margin-left: 5px !important;
+}
+
+html[dir="rtl"] .paddingleft {
+	padding-left: 0 !important;
+	padding-right: 5px !important;
+}
+
+html[dir="rtl"] .paddingright {
+	padding-right: 0 !important;
+	padding-left: 5px !important;
+}
+
+/* Menu positioning */
+html[dir="rtl"] #id-left {
+	float: right;
+	right: 0;
+	left: auto;
+}
+
+html[dir="rtl"] #id-right {
+	margin-right: <?php echo $leftmenuwidth + 4; ?>px;
+	margin-left: 0;
+}
+
+html[dir="rtl"] .side-nav {
+	right: 0;
+	left: auto;
+}
+
+html[dir="rtl"] .side-nav-vert {
+	border-right: none;
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Form elements */
+html[dir="rtl"] input[type="checkbox"],
+html[dir="rtl"] input[type="radio"] {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+html[dir="rtl"] .inline-block {
+	text-align: right;
+}
+
+/* Table alignment */
+html[dir="rtl"] table.liste th,
+html[dir="rtl"] table.liste td {
+	text-align: right;
+}
+
+html[dir="rtl"] .liste_titre {
+	text-align: right;
+}
+
+/* Icons and buttons */
+html[dir="rtl"] .btnTitle,
+html[dir="rtl"] .btnTitleSelected {
+	text-align: right;
+}
+
+html[dir="rtl"] img.photoref {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+/* Navigation and breadcrumbs */
+html[dir="rtl"] .pagination ul li {
+	float: right;
+}
+
+html[dir="rtl"] .breadcrumb {
+	padding-right: 15px;
+	padding-left: 0;
+}
+
+/* Tabs */
+html[dir="rtl"] .tabBar {
+	text-align: right;
+}
+
+html[dir="rtl"] .tabBar .tabsAction {
+	float: left;
+}
+
+html[dir="rtl"] .fiche .tabBar table td {
+	text-align: right;
+}
+
+/* Lists and menus */
+html[dir="rtl"] ul.vmenu {
+	text-align: right;
+}
+
+html[dir="rtl"] .vmenu .menu_titre {
+	text-align: right;
+}
+
+/* Dialog and modals */
+html[dir="rtl"] .ui-dialog {
+	text-align: right;
+}
+
+html[dir="rtl"] .ui-dialog .ui-dialog-buttonpane {
+	text-align: left;
+}
+
+/* Tooltips */
+html[dir="rtl"] .classfortooltip {
+	text-align: right;
+}
+
+/* Badge and status */
+html[dir="rtl"] .badge {
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+/* Field labels */
+html[dir="rtl"] .fieldrequired:before {
+	content: "*";
+	margin-left: 3px;
+	margin-right: 0;
+}
+
+/* Fix specific components that need RTL adjustment */
+html[dir="rtl"] .refidno {
+	text-align: right;
+}
+
+html[dir="rtl"] .pagination .fa-chevron-left:before {
+	content: "\f054";
+}
+
+html[dir="rtl"] .pagination .fa-chevron-right:before {
+	content: "\f053";
+}
+
+/* Top menu RTL adjustments */
+html[dir="rtl"] .tmenu {
+	float: right;
+}
+
+html[dir="rtl"] div.mainmenu {
+	float: right;
+}
+
+html[dir="rtl"] .login_block {
+	right: auto;
+	left: 5px;
+}
+
+/* Action buttons */
+html[dir="rtl"] .tabsAction,
+html[dir="rtl"] .tabsActionNoBottom {
+	text-align: left;
+	margin-right: 0;
+}
+
+html[dir="rtl"] .butAction,
+html[dir="rtl"] .butActionNew,
+html[dir="rtl"] .butActionDelete {
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+<?php
 
 // Add custom CSS if defined
 print getDolGlobalString('THEME_CUSTOM_CSS');
